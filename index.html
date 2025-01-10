@@ -6,14 +6,13 @@
     <link rel="icon" href="other/favicon.ico" type="image/ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <body style="background-color: #000000;"></body>
-    <title>SYS2</title>
+    <title>◈ SYS2</title>
 </head>
 
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="java.js">
 
-<audio id="select_audio" src="other/audio/select.wav"></audio>
-
+<audio id="select_audio" src="other/audio/select.mp3"></audio>
 
 
 <style>
@@ -34,10 +33,10 @@
         display:flex;
         margin-left: auto;
         margin-right: auto;
-        width: 90%;
-        max-width: 450px;
-        border-radius: 0%; <! was 15 >
-        opacity: 70%;
+        width: 100%;
+        max-width: 550px;
+        border-radius: 0%; 
+        opacity: 100%;
         
         
     }
@@ -70,19 +69,21 @@
         margin-top: 1%;
         margin-bottom: 1%;
 
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-family: PixelOperator;
         font-size: xx-large;
 
         color: whitesmoke;
         border-color: whitesmoke;
-        background-color: #00000000;
+        background-color: #000000;
+        padding: 10px;
 
-        border-radius: 9%;
+
         text-decoration: none;
         cursor: none;
 
         user-select: none;
         transition-duration: 0.1s;
+
     }
 </style>
 
@@ -90,6 +91,7 @@
     .buttonbox:hover {
         border-color: #fbeb50;
         color: #fbeb50;
+        
  
     }
 </style>
@@ -113,12 +115,11 @@
 <p class="infobar"></p>
 
 <video autoplay muted loop id="backClip" class="video1">
-    <source src="other/vecteezy_a-retro-glitch-overlay-distortion-abstract-background_3778726-ezgif.com-video-speed.mp4" type="video/mp4">
-    <link rel="stylesheet" href="">
+    <source src="other/background.webm" type="video/webm">
 
 </video>
 
-<link rel="backClip" href="java.js">
+<link rel="backClip" href="other/java.js">
 
 
 <h1 style="text-align: center; user-select: none; -webkit-user-drag: none;" class="style_intro">s т a v 2</h1>
@@ -159,29 +160,55 @@
     }
 </script>
 
-<script src="java.js"></script>
+<script src="other/java.js"></script>
 
 
 
 <div style="text-align: center;">
-    <a href="page/index.html">
-        <button onmouseover="document.getElementById('select_audio').play()", class="buttonbox">Button Alpha</button>
+    <a href="https://llamaking.net" target=_blank>
+        <button onmouseover="document.getElementById('select_audio').play()", onmousedown="document.getElementById('select_audio').play()" class="buttonbox">
+            visit llamaking.net
+        </button>
     </a>
 
-    <a href="page/index.html">
-        <button onmouseover="document.getElementById('select_audio').play()" class="buttonbox">Button Bravo</button>
+    <a href="">
+        <button onmouseover="document.getElementById('select_audio').play()" onmousedown="document.getElementById('select_audio').play()" class="buttonbox"
+        >second bravo
+    </button>
+
     </a>
 
-    <a href="page/index.html">
-        <button onmouseover="document.getElementById('select_audio').play()" class="buttonbox" style="min-width: 210px;">Button Charlie</button>
+    <a href="">
+        <button onmouseover="document.getElementById('select_audio').play()" onmousedown="document.getElementById('select_audio').play()" class="buttonbox" style="min-width: 210px;">
+        third charlie
+    </button>
     </a>
 
-    <a href="page/index.html">
-        <button onmouseover="document.getElementById('select_audio').play()" class="buttonbox">Button Delta</button>
+    <a href="">
+        <button onmouseover="document.getElementById('select_audio').play()" onmousedown="document.getElementById('select_audio').play()" class="buttonbox">
+            forth delta
+        </button>
     </a>
 
 </div>
 
 
 <p> </p> <TEST REMOVING THE CURSOR, MAKING AN AUTO SELECTION OF THE BUTTON - CLOSEST TO THE INVISIBLE CURSOR >
+
+
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        </head>
+        <body>
+        <div class="loader">
+            <img src="other/loading.gif" alt="">
+        </div>
+        
+        
+        <script src="java.js"></script>
+        </body>
+</html>
+
+<div class="progress-text"></div>
 
