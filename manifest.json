@@ -16,7 +16,13 @@
       "src": "https://stav2.net/other/media/AppIcon_1024x1024.png",
       "sizes": "1024x1024",
       "type": "image/png"
+    },
+    {
+      "src": "https://stav2.net/media/AppIcon_1024x1024.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
+
   ],
   "start_url": "/",
   "display": "standalone",
