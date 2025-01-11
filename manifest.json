@@ -3,17 +3,17 @@
   "short_name": "StNet",
   "icons": [
     {
-      "src": "other/media/AppIcon_192x192.png",
+      "src": "https://stav2.net/other/media/AppIcon_192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "other/media/AppIcon_152x152.png",
+      "src": "https://stav2.net/other/media/AppIcon_152x152.png",
       "sizes": "152x152",
       "type": "image/png"
     },
     {
-      "src": "other/media/AppIcon_1024x1024.png",
+      "src": "https://stav2.net/other/media/AppIcon_1024x1024.png",
       "sizes": "1024x1024",
       "type": "image/png"
     }
