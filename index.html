@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta >
     <link rel="icon" href="other/favicon.ico" type="image/ico" />
+    <link rel="manifest" href="/manifest.json">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <body style="background-color: #000000;"></body>
     <title>◈ StNet</title>
 
@@ -38,16 +40,15 @@
 <link rel="backClip" href="other/java.js">
 
 
-<h1 style="text-align: center; user-select: none; -webkit-user-drag: none;" class="style_intro">s т a v 2</h1>
-
-
-
+<h1 class="header">s т a v 2</h1>
 
 <hr class="pos">
 <hr class="pos">
 <p style="height: 5px;"></p>
 
-<h1 style="position: relative; font-size:200%; text-align: center; margin-top: -1%; color: whitesmoke; font-family: arial; user-select: none; -webkit-user-drag: none;">
+
+
+<h1 class="introduction">
 
     introduction
 
@@ -117,9 +118,9 @@
 
 
 <html>
-    <head>
+    <head id="loader">
 
-        <link rel="stylesheet" href="style.css">
+        <link  rel="stylesheet" href="style.css">
         </head>
         <body>
         <div class="loader">
@@ -140,41 +141,23 @@
 
     </head>
 </html>
--->
-
-<script>
+script>
     function func() {
         document.getElementById('loader').style.visibility="hidden"
 
     }
-
 </script>
-
-<script>
-    function func() {
-        document.getElementById('gif').style.visibility="hidden"
-
-    }
-
-</script>
-
-
-<!-- in dvlpment
-
-<link rel="stylesheet" href="style.css">
-
-
-<img id="dirrection" style="position: absolute; max-height: 150px; top: 40%; left: 88px;" src="other/media/dirrectionW.png">
+-->
 
 
 
+
+<img id="dirrection" class="fcircle" src="other/media/dirrection.png">
 <script>
     var dirrection = "";
     var oldx = 0;
     var oldy = 0;
     const dirrectionImage = document.getElementById("dirrection");
-
-
     mousemovemethod = function (e) {
         const centerX = dirrectionImage.offsetLeft + dirrectionImage.offsetWidth / 2;
         const centerY = dirrectionImage.offsetTop + dirrectionImage.offsetHeight / 2;
@@ -188,23 +171,19 @@
         dirrectionImage.style.transform = `rotate(${angle + 90}deg)`; // +90 to keep the top aligned
 
         oldx = e.pageX;
-        oldy = e.pageY;
-    };
-
-    document.addEventListener("mousemove", mousemovemethod);
+        oldy = e.pageY;};
+        document.addEventListener("mousemove", mousemovemethod);
 </script>
 
 
-<img id="dirrection2" style="position: absolute; max-height: 150px; top: 40%; right: 88px;" src="other/media/dirrectionW.png">
 
 
+<img id="dirrection2" class="fcircle2" src="other/media/dirrection.png">
 <script>
     var dirrection2 = "";
     var oldx = 0;
     var oldy = 0;
     const dirrection2Image = document.getElementById("dirrection2");
-
-
     mousemovemethod = function (e) {
         const centerX = dirrection2Image.offsetLeft + dirrection2Image.offsetWidth / 2;
         const centerY = dirrection2Image.offsetTop + dirrection2Image.offsetHeight / 2;
@@ -220,48 +199,50 @@
         oldx = e.pageX;
         oldy = e.pageY;
     };
-
     document.addEventListener("mousemove", mousemovemethod);
 </script>
 
+<!--
+
+<script>
+const buttons = document.querySelectorAll("#buttonbox .buttonbox, .firstclick");
 
 
+document.addEventListener("mousemove", (event) => {
+    const mouseX = event.pageX;
+    const mouseY = event.pageY;
 
+    let closestButton = null;
+    let closestDistance = Infinity;
 
-  <script>
-    const buttons = document.querySelectorAll("#buttonbox .buttonbox, .firstclick");
+    // Calculate the distance of each button to the cursor
+    buttons.forEach((button) => {
+    const rect = button.getBoundingClientRect();
+    const buttonX = rect.left + rect.width / 2;
+    const buttonY = rect.top + rect.height / 2;
 
+    const distance = Math.sqrt(
+        Math.pow(mouseX - buttonX, 2) + Math.pow(mouseY - buttonY, 2)
+    );
 
-    document.addEventListener("mousemove", (event) => {
-      const mouseX = event.pageX;
-      const mouseY = event.pageY;
+    // Check if this button is closer than the current closest
+    if (distance < closestDistance) {
+        closestDistance = distance;
+        closestButton = button;
 
-      let closestButton = null;
-      let closestDistance = Infinity;
-
-      // Calculate the distance of each button to the cursor
-      buttons.forEach((button) => {
-        const rect = button.getBoundingClientRect();
-        const buttonX = rect.left + rect.width / 2;
-        const buttonY = rect.top + rect.height / 2;
-
-        const distance = Math.sqrt(
-          Math.pow(mouseX - buttonX, 2) + Math.pow(mouseY - buttonY, 2)
-        );
-
-        // Check if this button is closer than the current closest
-        if (distance < closestDistance) {
-          closestDistance = distance;
-          closestButton = button;
-
-        }
-      });
-
-      // Update styles to highlight the closest button
-      buttons.forEach((button) => {
-        button.classList.toggle("closest", button === closestButton);
-      });
+    }
     });
-  </script>
+
+    // Update styles to highlight the closest button
+    buttons.forEach((button) => {
+    button.classList.toggle("closest", button === closestButton);
+    });
+});
+</script>
 
 -->
+
+<img src="other/media/rods.png" style="top: 0%; left: 0%; position: fixed; z-index: 0; height: 13vw; max-height: 25%;" alt="">
+
+<img src="other/media/rods.png" style="bottom: 0%; right: 0%; position: fixed; z-index: 0; height: 13vw; max-height: 25%;" class="rotate180" alt="">
+

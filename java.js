@@ -5,7 +5,7 @@ document.addEventListener('contextmenu', event => event.preventDefault());
 
 var loader = document.querySelector(".loader")
 
-window.addEventListener("load", vanish);
+
 
 function vanish() {
   loader.classList.add("disppear");
@@ -13,18 +13,15 @@ function vanish() {
 }
 
 
-
-
 document.querySelector('#firstclick').addEventListener("click", () => {
   loader.style.display = "none";
-
   firstclick.style.display = "none";
+
 });
 
 
 
 
-/*
 document.addEventListener("mousemove", (event) => {
   const mouseX = event.pageX;
   const mouseY = event.pageY;
@@ -66,4 +63,3 @@ document.addEventListener("click", () => {
       focusedButton.click();
   }
 });
-*/
