@@ -5,8 +5,8 @@
   "short_name": "StNet",
   "description": "private & personnal site of Stav2",
   "start_url": "/",
-  "background_color": "#000000",
-  "theme_color": "#feea0b",
+  "background_color": "#00FFFFFF",
+  "theme_color": "#00FFFFFF",
   "orientation": "any",
   "display": "standalone",
   "icons": [
