@@ -69,7 +69,7 @@ body {
   text-align: center; 
   margin-top: -1%; 
   color: whitesmoke; 
-  font-family: arial; 
+  font-family: Helmet-Regular; 
   user-select: none; 
   -webkit-user-drag: none;
 }
@@ -92,6 +92,7 @@ html, body {
     opacity: 80%; /*was 15*/
 
     transform: translateY(-50) translateX(50); /*good way to center stuff*/
+    scroll-snap-type: y mandatory;
 
 
 }
@@ -163,6 +164,12 @@ html, body {
 @font-face {
     font-family: 'PixelOperator' ;
     src: url(other/font/PixelOperatorMono-Bold.ttf);
+  
+}
+
+@font-face {
+  font-family: "Helmet-Regular";
+  src: url(other/font/Helmet-Regular.ttf);
 }
 
 *{
