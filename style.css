@@ -47,7 +47,7 @@ body {
     max-width: 550px;
     border-radius: 0%; 
     opacity: 90%; /* was 90% */
-
+    backdrop-filter: blur(100px);
     box-shadow: 12px 12px 12px #000000
     inset, -10px -10px -10px #ffffff;
     
@@ -79,7 +79,7 @@ html, body {
 
     min-height: 100%;
     height: auto;
-    opacity: 15%;
+    opacity: 80%; /*was 15*/
     transform: translateY(-50) translateX(50);
 
 
@@ -89,7 +89,7 @@ html, body {
 
 .buttonbox {
   
-    opacity: 90%;
+    opacity: 100%;
     height: auto;
     width: auto;
     margin-left: 1%;
@@ -103,16 +103,23 @@ html, body {
 
     color: whitesmoke;
     border-color: whitesmoke;
-    background-color: #000000;
+    background-color: #00000000;
+
+
+
     padding: 10px;
-    
+    backdrop-filter: blur(100px);
     text-decoration: none;
     cursor: none;
+
+
 
     user-select: none;
     transition-duration: 0.1s;
 
     z-index: 3 ;
+
+    
 
 }
 
@@ -121,6 +128,8 @@ html, body {
 .buttonbox:hover {
     border-color: #fbeb50;
     color: #fbeb50;
+
+
     
 
 }
@@ -259,10 +268,10 @@ html, body {
   max-height: 20%;
   bottom: 2%; 
   right: 2%;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0);
   border-radius: 50%;
   z-index: 2;
-  
+  backdrop-filter: blur(50px);
 
 }
 
@@ -272,10 +281,11 @@ html, body {
   max-height: 20%;
   top: 2%; 
   left: 2%;
-  background-color: #000000;
+  background-color: #00000000;
   border-radius: 50%;
   z-index: 2;
   background-size: cover;
+  backdrop-filter: blur(50px);
 
 }
 
