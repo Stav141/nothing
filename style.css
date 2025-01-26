@@ -321,3 +321,77 @@ html, body {
   grid-template-columns: 0fr 5fr 1fr;
   column-gap: 1px;
 }
+
+
+
+.grid {
+  display: grid;  
+  grid-template-columns: repeat(3, 1fr);
+
+  margin-top: 2vh;
+  margin-bottom: 1vh;
+  margin-left: 2vh;
+  margin-right: 1vh;
+}
+.containerboardAnimation {
+  position: absolute;
+
+  width: 56vh;
+  height: 33vh;
+  margin-top: 4vh;
+  margin-bottom: 1vh;
+  margin-left: 1vh;
+  margin-right: 1vh;
+  opacity: 0; 
+  pointer-events: auto; 
+  z-index: 99;
+  transition: opacity 0.3s ease; 
+  
+}
+
+.containerboardAnimation:hover {
+  opacity: 1; 
+}
+
+.containerboard {
+  position: absolute;
+  color: snow;
+  background-color: snow;
+  width: 44vh;
+  height: 33vh;
+  margin-top: 4vh;
+  margin-bottom: 1vh;
+  margin-left: 4vh;
+  margin-right: 1vh;
+  z-index: 1;
+  /* hidden initially */
+  transition: opacity 0.3s ease;
+  border-radius: 1vh;
+  
+}
+
+.board1 {
+  position: absolute;
+  height: 33vh;
+  opacity: 100%;
+  z-index: 2;
+  transition: transform 0.3s ease;
+  border-radius: 0.5vh;
+}
+
+.containerboardAnimation:hover ~ .board1 {
+  transform: translateX(43vh);
+}
+
+.containerboardAnimation:hover ~ .containerboard {
+  opacity: 1;
+}
+.board1title {
+  text-align: center;
+  color: rgb(35, 35, 48);
+  font-size: 5vh;
+  text-align-last: center;
+  
+
+  font-family: Helmet-Regular;
+}
