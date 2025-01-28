@@ -1,0 +1,129 @@
+.imagegrid {
+    display: grid;  
+    grid-template-columns: repeat(3, 1fr);
+  
+    margin-top: 1.8vh;
+    margin-bottom: 1vh;
+    margin-left: 2vh;
+    margin-right: 1vh;
+}
+.boardAnimation {
+    position: absolute;
+    width: 32vh;
+    height: 24vh;
+    margin-top: 3.6vh;
+    margin-bottom: 1vh;
+    margin-left: 4vh;
+    margin-right: 1vh;
+    pointer-events: auto; 
+    z-index: 99;
+    transition: opacity 0.3s ease; 
+    cursor: url(other/cursor.ico), default;
+    -webkit-user-drag: none; 
+}
+.containerboard {
+    position: absolute;
+    color: #242424;
+    background-color: #242424;
+    width: 30vh;
+    height: 23vh;
+    margin-top: 4vh;
+    margin-bottom: 1vh;
+    margin-left: 4.3vh;
+    margin-right: 1vh;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+    border-radius: 1vh;
+}
+.board1 {
+    position: absolute;
+    height: 24vh;
+    opacity: 100%;
+    z-index: 2;
+    transition: transform 0.3s ease;
+    border-radius: 0.5vh;
+}
+.boardAnimation:hover ~ .board1 {
+    transform: translateX(30vh);
+}
+.boardAnimation:hover ~ .containerboard {
+    border: 2px solid #004990;
+    box-shadow: 0px 0px 15px #004990;  
+}
+.board1title {
+    text-align: center;
+    color: #ff8dd9;
+    font-size: 4vh;
+    text-align-last: center;
+    font-family: Helmet-Regular;
+}
+
+
+/* 2 */
+/* 2 */
+/* 2 */
+
+.imagegrid2 {
+    display: grid;  
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 17.6vh;
+    margin-bottom: 1vh;
+    margin-left: 2vh;
+    margin-right: 1vh;
+}
+.boardAnimation2 {
+    position: absolute;
+    width: 35vh;
+    height: 25vh;
+    margin-top: 34.6vh;
+    margin-bottom: 1vh;
+    margin-left: 4vh;
+    margin-right: 1vh;
+    opacity: 100%; 
+    pointer-events: auto; 
+    z-index: 99;
+    transition: opacity 0.3s ease; 
+    cursor: none;
+    
+    
+}
+
+.containerboard2 {
+    position: absolute;
+    color: #242424;
+    background-color: #242424;
+    width: 30vh;
+    height: 23vh;
+    margin-top: 35vh;
+    margin-bottom: 1vh;
+    margin-left: 4.3vh;
+    margin-right: 1vh;
+    z-index: 1;
+    border: 5px solid #55555500;
+    
+    transition: opacity 0.3s ease;
+    border-radius: 1vh;
+}  
+.board2 {
+    position: absolute;
+    height: 24vh;
+    width: 35vh;
+    opacity: 100%;
+    z-index: 2;
+    transition: transform 0.3s ease;
+    border-radius: 0.5vh;
+}
+.boardAnimation2:hover ~ .board2 {
+    transform: translateX(30vh);
+}
+.boardAnimation2:hover ~ .containerboard2 {
+    border: 2px solid #004990;
+    box-shadow: 0px 0px 15px #004990;  
+}
+.board1title2 {
+    text-align: center;
+    color: #e9e9e9;
+    font-size: 4vh;
+    text-align-last: center;
+    font-family: Helmet-Regular;
+}
