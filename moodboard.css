@@ -1,3 +1,26 @@
+
+
+
+.topnav
+{
+  overflow: hidden;
+  background-color: #666699;
+}
+
+.topnav a
+{
+  position: relative;
+  float: left;
+  text-align: center;
+  color: var(--always-light);
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  color: snow;
+}
+
+/* */
+
 .imagegrid {
     display: grid;  
     grid-template-columns: repeat(3, 1fr);
@@ -6,10 +29,11 @@
     margin-bottom: 1vh;
     margin-left: 2vh;
     margin-right: 1vh;
+
 }
 .boardAnimation {
     position: absolute;
-    width: 32vh;
+    width: 43vh;
     height: 24vh;
     margin-top: 3.6vh;
     margin-bottom: 1vh;
@@ -18,8 +42,10 @@
     pointer-events: auto; 
     z-index: 99;
     transition: opacity 0.3s ease; 
-    cursor: url(other/cursor.ico), default;
+    cursor:none;
     -webkit-user-drag: none; 
+    /* background-color: pink; */
+    
 }
 .containerboard {
     position: absolute;
@@ -34,6 +60,7 @@
     z-index: 1;
     transition: opacity 0.3s ease;
     border-radius: 1vh;
+    
 }
 .board1 {
     position: absolute;
@@ -42,6 +69,7 @@
     z-index: 2;
     transition: transform 0.3s ease;
     border-radius: 0.5vh;
+    
 }
 .boardAnimation:hover ~ .board1 {
     transform: translateX(30vh);
@@ -103,6 +131,7 @@
     
     transition: opacity 0.3s ease;
     border-radius: 1vh;
+    
 }  
 .board2 {
     position: absolute;
@@ -127,3 +156,8 @@
     text-align-last: center;
     font-family: Helmet-Regular;
 }
+
+/* 3 */
+/* 3 */
+/* 3 */
+
