@@ -23,7 +23,7 @@
 <p class="infobar"></p>
 
 
-<video oncontextmenu="return false;" autoplay muted loop id="backClip" class="video1">
+<video oncontextmenu="return false;" autoplay muted loop id="backClip" class="video1" controls disablePictureInPicture controlsList="nodownload">
     <source src="other/iceberg.webm" type="video/webm">
 
 </video>
@@ -35,7 +35,7 @@
 
 
 
-<h1 class="header"> s т ᴀ ᴠ 2</h1>
+<h1 class="header"> s т ᴀ v 2</h1>
 <p class="introduction" style="margin-bottom: -1vh; margin-top: -4vh;">________</p>
 
 
@@ -109,44 +109,6 @@
 
 
 
-<!--
-<button id="firstclick" class="buttonbox firstclick glow_animation", class="firstclick" , onmouseover="document.getElementById('select_audio').play()" onmousedown="document.getElementById('select_audio').play()"> 
-    CLICK TO LOAD
-</button>
-
-<html>
-    <head id="loader">
-
-        <link  rel="stylesheet" href="style.css">
-        </head>
-        <body>
-        <div class="loader">
-            
-            <img src="other/loading.gif">
-            hr
-        </div>
-        
-        <script src="java.js"></script>
-
-        </body>
-</html>
-
-<html>
-    <head>
-        <div class="gif ">
-            <img src="other/loading.gif">
-        </div>
-
-    </head>
-</html>
-script>
-    function func() {
-        document.getElementById('loader').style.visibility="hidden"
-
-    }
-</script>
--->
-
 
 
 
@@ -201,45 +163,77 @@ script>
 </script>
 -->
 
-<!--
+
 
 <script>
-const buttons = document.querySelectorAll("#buttonbox .buttonbox, .firstclick");
-
-
-document.addEventListener("mousemove", (event) => {
-    const mouseX = event.pageX;
-    const mouseY = event.pageY;
-
-    let closestButton = null;
-    let closestDistance = Infinity;
-
-    // Calculate the distance of each button to the cursor
-    buttons.forEach((button) => {
-    const rect = button.getBoundingClientRect();
-    const buttonX = rect.left + rect.width / 2;
-    const buttonY = rect.top + rect.height / 2;
-
-    const distance = Math.sqrt(
-        Math.pow(mouseX - buttonX, 2) + Math.pow(mouseY - buttonY, 2)
-    );
-
-    // Check if this button is closer than the current closest
-    if (distance < closestDistance) {
-        closestDistance = distance;
-        closestButton = button;
-
-    }
+    const buttons = document.querySelectorAll("#buttonbox .buttonbox, .firstclick");
+    
+    
+    document.addEventListener("mousemove", (event) => {
+        const mouseX = event.pageX;
+        const mouseY = event.pageY;
+    
+        let closestButton = null;
+        let closestDistance = Infinity;
+    
+        // Calculate the distance of each button to the cursor
+        buttons.forEach((button) => {
+        const rect = button.getBoundingClientRect();
+        const buttonX = rect.left + rect.width / 2;
+        const buttonY = rect.top + rect.height / 2;
+    
+        const distance = Math.sqrt(
+            Math.pow(mouseX - buttonX, 2) + Math.pow(mouseY - buttonY, 2)
+        );
+    
+        // Check if this button is closer than the current closest
+        if (distance < closestDistance) {
+            closestDistance = distance;
+            closestButton = button;
+    
+        }
+        });
+    
+        // Update styles to highlight the closest button
+        buttons.forEach((button) => {
+        button.classList.toggle("closest", button === closestButton);
+        });
     });
-
-    // Update styles to highlight the closest button
-    buttons.forEach((button) => {
-    button.classList.toggle("closest", button === closestButton);
-    });
-});
 </script>
 
+
+
+<!--
+<button id="firstclick" class="buttonbox firstclick glow_animation firstclick" , onmouseover="document.getElementById('select_audio').play()" onmousedown="document.getElementById('select_audio').play()"> 
+    CLICK TO LOAD
+</button>
+
+<html>
+    <head id="loader">
+
+        <link  rel="stylesheet" href="style.css">
+        </head>
+        <body>
+        <div class="loader">
+            
+            <img src="other/loading.gif">
+
+        </div>
+        
+        <script src="java.js"></script>
+
+        </body>
+</html>
+
+<script>
+    function func() {
+        document.getElementById('loader').style.visibility="hidden"
+
+    }
+</script>
 -->
+
+
 
 <img src="other/media/rods.png" style="top: 0%; left: 0%; position: fixed; z-index: 1; height: 15vh;" alt="">
 
