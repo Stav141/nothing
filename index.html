@@ -10,232 +10,245 @@
     <body style="background-color: #000000;"></body>
     <title>◈ StNet</title>
 </head>
-
-
-
-
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="java.js">
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<audio id="select_audio" src="other/audio/select.mp3"></audio>
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .screen {
+            width: 640px;
+            height: 480px;
+            background-color: white; /* Change to your desired content background */
+            box-shadow: 0 0 10px #ffffff33; /* Optional glow effect */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            color: black;
+        }
+    </style>
+</head>
+<body>
 
 
-<p class="infobar"></p>
 
 
-<video oncontextmenu="return false;" autoplay muted loop id="backClip" class="video1" controls disablePictureInPicture controlsList="nodownload">
-    <source src="other/iceberg.webm" type="video/webm">
-
+<video oncontextmenu="return false;" autoplay muted loop id="backClip" class="video2" controls disablePictureInPicture controlsList="nodownload">
+    <source src="other/scrolling.webm" type="video/webm">
 </video>
 
 
-<link rel="backClip" href="other/java.js">
+
+<h1 class="header" style="text-align: center; margin-top: -70vh;"> s т ᴀ v 2</h1>
+
+<!--new down-->
+
+<div class="container">
+    <link rel="stylesheet" href="style.css">
+    <audio id="select_audio" src="other/audio/select.mp3"></audio>
+
+    <p class="infobar"></p>
+
+    <video oncontextmenu="return false;" autoplay muted loop id="backClip" class="video1" controls disablePictureInPicture controlsList="nodownload">
+        <source src="other/iceberg.webm" type="video/webm">
+    </video>
 
 
+    <!--<h1 class="header">s t a v 2</h1>
+    <p class="introduction" style="margin-top: -3vh; z-index: 15; opacity: 50%;">________</p>-->
+    <h1 class="introduction">introduction -</h1>
+    <p class="intro-text">
+        This website is not a good stalking piece.<br/>
+    </p>
 
+    <img src="other/chara1.png" class="MainImage">
+    <img src="other/quote.png" class="SecondImage">
 
-
-<h1 class="header"> s т ᴀ v 2</h1>
-<p class="introduction" style="margin-bottom: -1vh; margin-top: -4vh;">________</p>
-
-
-
-
-<p style="height: 1px;"></p>
-
-<h1 class="introduction">
-
-    introduction
-
-</h1>
-
-
-<p style="text-align: center; color: whitesmoke; position: relative; user-select: none; font-family: Helmet-Regular;  font-size:2vh; ">
-    This website is not a good stalking piece.<br/>
-
-</p>
-
-
-
-
-
-
-
-
-<img src="other/chara1.png" class="MainImage" style="user-select: none; -webkit-user-drag: none ;">
-<img src="other/quote.png" class="SecondImage">
-
-
-
-
-<script>
-    function changePlaybackRate() {
-        const video = document.getElementById('BackClip');
-        video.playbackRate = 0;
-    }
-</script>
-
-<script src="other/java.js"></script>
-
-
-
-<div style="text-align: center;" id="buttonbox">
-    <a href="https://github.com/Stav141" target=_blank style="text-decoration: none">
-        <button onmouseover="document.getElementById('select_audio').play()",  onmousedown="document.getElementById('select_audio').play()" class="buttonbox">
-            mine github
+    <div style="text-align: center;" id="buttonbox">
+        <a href="https://github.com/Stav141" target=_blank style="text-decoration: none">
+            <button onmouseover="document.getElementById('select_audio').play()",  onmousedown="document.getElementById('select_audio').play()" class="buttonbox">
+                mine github
+            </button>
+        </a>
+    
+        <a href="https://llamaking.net" target=_blank style="text-decoration: none;" id="dick">
+            <button onmouseover="document.getElementById('select_audio').play()" onmousedown="document.getElementById('select_audio').play()" class="buttonbox buttonboxPink">
+                <span>visit llamaking.net </span>
         </button>
-    </a>
-
-    <a href="https://llamaking.net" target=_blank style="text-decoration: none;" id="dick">
-        <button onmouseover="document.getElementById('select_audio').play()" onmousedown="document.getElementById('select_audio').play()" class="buttonbox buttonboxPink">
-            <span>visit llamaking.net </span>
-    </button>
-
-
-
-    <a href="moodboard" style="text-decoration: none;">
-        <button onmouseover="document.getElementById('select_audio').play()" onmousedown="document.getElementById('select_audio').play()" class="buttonbox" style="min-width: 210px;">
-        moodboard
-    </button>
-    </a>
-
-    <a href="bio" style="text-decoration: none;">
-        <button onmouseover="document.getElementById('select_audio').play()" onmousedown="document.getElementById('select_audio').play()" class="buttonbox">
-            on mineself
+    
+    
+    
+        <a href="moodboard" style="text-decoration: none;">
+            <button onmouseover="document.getElementById('select_audio').play()" onmousedown="document.getElementById('select_audio').play()" class="buttonbox" style="min-width: 210px;">
+            moodboard
         </button>
-    </a>
-
-</div>
-
-
-
-
-
-
-<img id="dirrection" class="fcircle" src="other/media/dirrection.png">
-<script>
-    var dirrection = "";
-    var oldx = 0;
-    var oldy = 0;
-    const dirrectionImage = document.getElementById("dirrection");
-    mousemovemethod = function (e) {
-        const centerX = dirrectionImage.offsetLeft + dirrectionImage.offsetWidth / 2;
-        const centerY = dirrectionImage.offsetTop + dirrectionImage.offsetHeight / 2;
-
-        const deltaX = e.pageX - centerX;
-        const deltaY = e.pageY - centerY;
-
-        const angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI);
+        </a>
+    
+        <a href="bio" style="text-decoration: none;">
+            <button onmouseover="document.getElementById('select_audio').play()" onmousedown="document.getElementById('select_audio').play()" class="buttonbox">
+                on mineself
+            </button>
+        </a>
+    
+    </div>
 
 
-        dirrectionImage.style.transform = `rotate(${angle + 90}deg)`; // +90 to keep the top aligned
 
-        oldx = e.pageX;
-        oldy = e.pageY;};
+<!--new up-->
+
+
+<!--
+    <img id="dirrection" class="fcircle" src="other/media/dirrection.png">
+    <script>
+        var dirrection = "";
+        var oldx = 0;
+        var oldy = 0;
+        const dirrectionImage = document.getElementById("dirrection");
+        mousemovemethod = function (e) {
+            const centerX = dirrectionImage.offsetLeft + dirrectionImage.offsetWidth / 2;
+            const centerY = dirrectionImage.offsetTop + dirrectionImage.offsetHeight / 2;
+
+            const deltaX = e.pageX - centerX;
+            const deltaY = e.pageY - centerY;
+
+            const angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI);
+
+
+            dirrectionImage.style.transform = `rotate(${angle + 90}deg)`; // +90 to keep the top aligned
+
+            oldx = e.pageX;
+            oldy = e.pageY;};
+            document.addEventListener("mousemove", mousemovemethod);
+    </script>
+
+
+-->
+    <!--
+    <img id="dirrection2" class="fcircle2" src="other/media/dirrection.png">
+    <script>
+        var dirrection2 = "";
+        var oldx = 0;
+        var oldy = 0;
+        const dirrection2Image = document.getElementById("dirrection2");
+        mousemovemethod = function (e) {
+            const centerX = dirrection2Image.offsetLeft + dirrection2Image.offsetWidth / 2;
+            const centerY = dirrection2Image.offsetTop + dirrection2Image.offsetHeight / 2;
+
+            const deltaX = e.pageX - centerX;
+            const deltaY = e.pageY - centerY;
+
+            const angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI);
+
+
+            dirrection2Image.style.transform = `rotate(${angle + 90}deg)`; // +90 to keep the top aligned
+
+            oldx = e.pageX;
+            oldy = e.pageY;
+        };
         document.addEventListener("mousemove", mousemovemethod);
-</script>
+    </script>
+    -->
 
+  <!--
 
-
-<!--
-<img id="dirrection2" class="fcircle2" src="other/media/dirrection.png">
-<script>
-    var dirrection2 = "";
-    var oldx = 0;
-    var oldy = 0;
-    const dirrection2Image = document.getElementById("dirrection2");
-    mousemovemethod = function (e) {
-        const centerX = dirrection2Image.offsetLeft + dirrection2Image.offsetWidth / 2;
-        const centerY = dirrection2Image.offsetTop + dirrection2Image.offsetHeight / 2;
-
-        const deltaX = e.pageX - centerX;
-        const deltaY = e.pageY - centerY;
-
-        const angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI);
-
-
-        dirrection2Image.style.transform = `rotate(${angle + 90}deg)`; // +90 to keep the top aligned
-
-        oldx = e.pageX;
-        oldy = e.pageY;
-    };
-    document.addEventListener("mousemove", mousemovemethod);
-</script>
--->
-
-
-
-<script>
-    const buttons = document.querySelectorAll("#buttonbox .buttonbox, .firstclick");
-    
-    
-    document.addEventListener("mousemove", (event) => {
-        const mouseX = event.pageX;
-        const mouseY = event.pageY;
-    
-        let closestButton = null;
-        let closestDistance = Infinity;
-    
-        // Calculate the distance of each button to the cursor
-        buttons.forEach((button) => {
-        const rect = button.getBoundingClientRect();
-        const buttonX = rect.left + rect.width / 2;
-        const buttonY = rect.top + rect.height / 2;
-    
-        const distance = Math.sqrt(
-            Math.pow(mouseX - buttonX, 2) + Math.pow(mouseY - buttonY, 2)
-        );
-    
-        // Check if this button is closer than the current closest
-        if (distance < closestDistance) {
-            closestDistance = distance;
-            closestButton = button;
-    
-        }
-        });
-    
-        // Update styles to highlight the closest button
-        buttons.forEach((button) => {
-        button.classList.toggle("closest", button === closestButton);
-        });
-    });
-</script>
-
-
-
-<!--
-<button id="firstclick" class="buttonbox firstclick glow_animation firstclick" , onmouseover="document.getElementById('select_audio').play()" onmousedown="document.getElementById('select_audio').play()"> 
-    CLICK TO LOAD
-</button>
-
-<html>
-    <head id="loader">
-
-        <link  rel="stylesheet" href="style.css">
-        </head>
-        <body>
-        <div class="loader">
-            
-            <img src="other/loading.gif">
-
-        </div>
+    <script>
+        const buttons = document.querySelectorAll("#buttonbox .buttonbox, .firstclick");
         
-        <script src="java.js"></script>
+        
+        document.addEventListener("mousemove", (event) => {
+            const mouseX = event.pageX;
+            const mouseY = event.pageY;
+        
+            let closestButton = null;
+            let closestDistance = Infinity;
+        
+            // Calculate the distance of each button to the cursor
+            buttons.forEach((button) => {
+            const rect = button.getBoundingClientRect();
+            const buttonX = rect.left + rect.width / 2;
+            const buttonY = rect.top + rect.height / 2;
+        
+            const distance = Math.sqrt(
+                Math.pow(mouseX - buttonX, 2) + Math.pow(mouseY - buttonY, 2)
+            );
+        
+            // Check if this button is closer than the current closest
+            if (distance < closestDistance) {
+                closestDistance = distance;
+                closestButton = button;
+        
+            }
+            });
+        
+            // Update styles to highlight the closest button
+            buttons.forEach((button) => {
+            button.classList.toggle("closest", button === closestButton);
+            });
+        });
+    </script>
 
-        </body>
+
+
+  
+    <button id="firstclick" class="buttonbox firstclick glow_animation firstclick" , onmouseover="document.getElementById('select_audio').play()" onmousedown="document.getElementById('select_audio').play()"> 
+        CLICK TO LOAD
+    </button>
+
+    <html>
+        <head id="loader">
+
+            <link  rel="stylesheet" href="style.css">
+            </head>
+            <body>
+            <div class="loader">
+                
+                <img src="other/loading.gif">
+
+            </div>
+            
+            <script src="java.js"></script>
+
+            </body>
+    </html>
+
+    <script>
+        function func() {
+            document.getElementById('loader').style.visibility="hidden"
+
+        }
+    </script>
+
+
+
+
+    <img src="other/media/rods.png" style="top: 0%; left: 0%; position: fixed; z-index: 1; height: 15vh;" alt="">
+
+    <img src="other/media/rods.png" style="bottom: 0%; right: 0%; position: fixed; z-index: 1; height: 15vh;" class="rotate180" alt="">
+    -->
+
+
+
+
+
+<!-- should be at the end always-->
+</div>
+</body>
 </html>
-
-<script>
-    function func() {
-        document.getElementById('loader').style.visibility="hidden"
-
-    }
-</script>
--->
+<!-- should be at the end always-->
 
 
-
-<img src="other/media/rods.png" style="top: 0%; left: 0%; position: fixed; z-index: 1; height: 15vh;" alt="">
-
-<img src="other/media/rods.png" style="bottom: 0%; right: 0%; position: fixed; z-index: 1; height: 15vh;" class="rotate180" alt="">
-
+<img class="rainbow" src="other/rainbow-95.gif" alt="">
