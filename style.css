@@ -60,7 +60,7 @@ body {
     font-family: 'Arial';
     
     color: whitesmoke;
-    background-color: #111111;
+    background-color: #000000;
     padding: 10px;
     font-size:4vh;
 
@@ -110,8 +110,10 @@ body {
   font-size:3vh; 
 
   text-align: center; 
-  margin-top: 0vh; 
+  margin-top: -0.5vh; 
   color: whitesmoke; 
+  background-color: #000000;
+  padding: 10px;
   font-family: Helmet-Regular; 
   user-select: none; 
   -webkit-user-drag: none;
@@ -122,7 +124,7 @@ body {
   color: whitesmoke;
   font-size: 2vh;
   margin-bottom: 1vh; 
-  margin-top: 1vh;
+  margin-top: -0.5vh;
 }
 
 html, body {
@@ -137,13 +139,29 @@ html, body {
     min-width: 100%;
     pointer-events: none;
     min-height: 100%;
+    max-width: 120vh;
     height: auto;
     opacity: 35%; /*15*/
-
     transform: translateY(-50) translateX(50); /*good way to center stuff*/
     scroll-snap-type: y mandatory;
     z-index: -1;
 }
+
+/*
+.videoback {
+  position: fixed;
+
+  
+  pointer-events: none;
+  width: 78vh;
+  height: 63vh;
+
+
+  transform: translateY(-50) translateX(50);
+
+  z-index: 2;
+}
+*/
 
 
 .video2 {
@@ -382,20 +400,21 @@ html, body {
 
 .casual-text {
   color: snow;
+
   font-family: arial;
-  margin-left: 3vh;
-  margin-top: 3vh;
-  font-size: 3vh;
+  margin-left: 0.5vh;
+  margin-top: 0vh;
+  font-size: 2vh;
 }
 
 
 
 .imageside {
 
-  width: 35vh;
+  width: 25vh;
 
-  margin-left:3vh;
-  margin-top: 3vh;
+  margin-left:1vh;
+  margin-top: 1vh;
 }
 
 .sidetext {
