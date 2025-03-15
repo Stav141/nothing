@@ -21,6 +21,7 @@ html, body {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  z-index: -20;
 }
 
 /**/  
@@ -58,7 +59,6 @@ body {
 .header {
     position: relative;
     font-family: 'Arial';
-    
     color: whitesmoke;
     background-color: #000000;
     padding: 10px;
@@ -84,9 +84,11 @@ body {
     z-index: 2;
     opacity: 100%; /* was 90% */
     backdrop-filter: blur(5px);
-
-    
 }
+.MainImage:hover{
+  background-color: #11111185;
+}
+
 .SecondImage {
     user-select: none; 
     -webkit-user-drag: none;
@@ -104,6 +106,12 @@ body {
     backdrop-filter: blur(5px);
 
 }
+
+.SecondImage:hover{
+  background-color: #11111185;
+
+}
+
 
 .introduction {
   position: relative; 
@@ -147,7 +155,7 @@ html, body {
     z-index: -1;
 }
 
-/*
+/**/
 .videoback {
   position: fixed;
 
@@ -159,9 +167,9 @@ html, body {
 
   transform: translateY(-50) translateX(50);
 
-  z-index: 2;
+  z-index: 1;
 }
-*/
+
 
 
 .video2 {
@@ -172,11 +180,11 @@ html, body {
   pointer-events: none;
   min-height: 100%;
   height: auto;
-  opacity: 6%;
+  opacity: 8%;
 
   transform: translateY(-50) translateX(50); /*good way to center stuff*/
   scroll-snap-type: y mandatory;
-  z-index: 1;
+  z-index: -3;
 }
 
 
@@ -430,4 +438,23 @@ html, body {
   z-index: 1;
   opacity: 90%;
   margin-bottom: -23vh;
+  user-select: none;
+  -webkit-user-drag: none;
 }
+
+.gnome {
+
+  position: fixed;
+
+
+  bottom: 0vh;
+  object-fit: cover;
+
+}
+.gnome2{
+  width:auto; 
+  height:10vh;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
