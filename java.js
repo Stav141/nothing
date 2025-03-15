@@ -64,3 +64,11 @@ document.addEventListener("click", () => {
   }
 });
 
+function glitchEffect() {
+  let body = document.body;
+  let x = Math.random() * 4 - 2;
+  let y = Math.random() * 4 - 2;
+  body.style.transform = `translate(${x}px, ${y}px)`;
+}
+
+setInterval(glitchEffect, 100);

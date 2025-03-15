@@ -3,9 +3,51 @@
 border: 5px solid #555;
 cursor: url(other/cursor.ico), default ;
 draggable="false"
-
-
+html {
+  filter: grayscale(100%) contrast(100%);
+}
 */
+
+:root {
+  --color-1: #000000; /* Black */
+  --color-2: #1D2B53; /* Dark Blue */
+  --color-3: #7E2553; /* Purple */
+  --color-4: #008751; /* Dark Green */
+  --color-5: #AB5236; /* Brown */
+  --color-6: #5F574F; /* Dark Gray */
+  --color-7: #C2C3C7; /* Light Gray */
+  --color-8: #FFF1E8; /* White */
+  --color-9: #FF004D; /* Red */
+  --color-10: #FFA300; /* Orange */
+  --color-11: #FFEC27; /* Yellow */
+  --color-12: #00E436; /* Green */
+  --color-13: #29ADFF; /* Blue */
+  --color-14: #83769C; /* Lavender */
+  --color-15: #FF77A8; /* Pink */
+  --color-16: #FFCCAA; /* Peach */
+}
+
+
+/* Simulated CRT scanlines */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    rgba(0, 0, 0, 0.3) 0px,
+    rgba(0, 0, 0, 0.1) 1px,
+    transparent 2px,
+    transparent 4px
+  );
+  pointer-events: none;
+  animation: scanlines 0.1s infinite linear;
+  z-index: 9999;
+  opacity: 50%;
+}
+
 
 
 
