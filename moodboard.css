@@ -1,43 +1,6 @@
 
 
-.text222 {
-    position: right;
-    color: var(--always-light);
 
-    text-decoration: none;
-    font-size: 1.5vh;
-    color: snow;
-    z-index: 9;
-    float: right;
-    margin-right: 2vh;
-    font-family: Arial, sans-serif;
-
-}
-
-
-.topnav
-{
-  overflow: hidden;
-  background-color: #666699;
-  z-index: 9;
-  margin-top: -75vh;
-  border-radius: 10px;
-  font-family: Arial, sans-serif;
-}
-
-.topnav a
-{
-    position: relative;
-    color: var(--always-light);
-    padding:1vh 10vh;
-    text-decoration: none;
-    font-size: 2vh;
-    color: snow;
-    z-index: 9;
-    float: left;
-
-    
-}
 
 /* */
 

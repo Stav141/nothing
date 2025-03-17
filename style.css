@@ -500,3 +500,49 @@ html, body {
   -webkit-user-drag: none;
 }
 
+
+.text222 {
+
+  color: var(--always-light);
+
+  text-decoration: none;
+  font-size: 1.5vh;
+  color: snow;
+  z-index: 9;
+  float: right;
+  margin-right: 2vh;
+  font-family: Arial, sans-serif;
+  margin-top: 1vh;
+  
+}
+
+
+.topnav
+{
+overflow: hidden;
+background-color: #666699;
+z-index: 9;
+margin-top: -75vh;
+border-radius: 10px;
+font-family: Arial, sans-serif;
+width: 50vh;
+height: 5vh;
+
+
+}
+
+.topnav a
+{
+  position: fixed;
+  color: var(--always-light);
+  width: 25vh;
+  height: 10vh;
+  text-decoration: none;
+  font-size: 2vh;
+  color: snow;
+  z-index: 9;
+  margin-top: 1vh;
+  margin-left: 1vh;
+
+  
+}

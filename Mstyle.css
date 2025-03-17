@@ -81,6 +81,7 @@ html, body {
   justify-content: center;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
   z-index: 2;
+  overflow: auto;
 }
 
 
@@ -138,13 +139,13 @@ body {
     display:flex;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 1vw; 
+    margin-top: 2vw; 
     margin-bottom: 1vh;
 
     min-width: 5vw; /*35*/
     width: 55vh; /*45*/
     max-width: 100%;
-    margin-bottom: 2vh;
+
     backdrop-filter: blur(5px);
 
 }
@@ -160,7 +161,7 @@ body {
   font-size:3vh; 
 
   text-align: center; 
-  margin-top: -0.5vh; 
+  margin-top: -0vh; 
   color: whitesmoke; 
   background-color: #000000;
   padding: 10px;
@@ -173,8 +174,8 @@ body {
   font-family: Helmet-Regular; 
   color: whitesmoke;
   font-size: 2vh;
-  margin-bottom: 1vh; 
-  margin-top: -0.5vh;
+  margin-bottom: 2vh; 
+  margin-top: 1.5vh;
 }
 
 html, body {
@@ -184,6 +185,7 @@ html, body {
 
 .video1 {
     position: fixed;
+    object-fit:cover;
     right: 0;
     bottom: 0;
     min-width: 100%;
@@ -195,6 +197,7 @@ html, body {
     transform: translateY(-50) translateX(50); /*good way to center stuff*/
     scroll-snap-type: y mandatory;
     z-index: -1;
+
 }
 
 /**/
@@ -232,9 +235,11 @@ html, body {
   
     opacity: 100%;
     
+    
     height: auto;
     width: auto;
 
+    min-width: 30vh;
 
     margin-left: 1%;
     margin-right: 1%;
@@ -243,8 +248,8 @@ html, body {
     margin-top: 1%;
 
     font-family: PixelOperator;
-    font-size: xx-large;
 
+    font-size: 3vh;
     color: whitesmoke;
     border-color: whitesmoke;
     background-color: #11111100;
@@ -457,16 +462,62 @@ html, body {
 
 
 
+.text222 {
+
+  color: var(--always-light);
+
+  text-decoration: none;
+  font-size: 1.5vh;
+  color: snow;
+  z-index: 9;
+  float: right;
+  margin-right: 2vh;
+  font-family: Arial, sans-serif;
+  margin-top: 1vh;
+}
+
+
+.topnav
+{
+overflow: hidden;
+background-color: #666699;
+z-index: 9;
+margin-top: -85vh;
+border-radius: 10px;
+font-family: Arial, sans-serif;
+
+max-height: 5vh;
+
+}
+
+.topnav a
+{
+  position: relative;
+  color: var(--always-light);
+  width: 25vh;
+  height: 10vh;
+  text-decoration: none;
+  font-size: 2vh;
+  color: snow;
+  z-index: 9;
+  margin-top: 1vh;
+  margin-left: 1vh;
+
+  
+}
+
+
+
 .imageside {
 
-  width: 25vh;
+  width: 20vh;
 
   margin-left:1vh;
   margin-top: 1vh;
 }
 
 .sidetext {
-  display: grid;
+  
   grid-template-columns: 0fr 5fr 1fr;
   column-gap: 1px;
 }
