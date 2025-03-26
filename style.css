@@ -81,6 +81,7 @@ html, body {
   justify-content: center;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
   z-index: 2;
+  overflow:hidden;
 }
 
 
@@ -91,11 +92,7 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-body {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 
-}
 
 
 .header {
@@ -450,13 +447,19 @@ html, body {
 
 .casual-text {
   color: snow;
-
   font-family: arial;
   margin-left: 0.5vh;
   margin-top: 0vh;
   font-size: 2vh;
+
+}
+::-webkit-scrollbar {
+  width: 12px;
 }
 
+::-webkit-scrollbar-track {
+  display: none;
+}
 
 
 .imageside {
