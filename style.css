@@ -8,24 +8,6 @@ html {
 }
 */
 
-:root {
-  --color-1: #000000; /* Black */
-  --color-2: #1D2B53; /* Dark Blue */
-  --color-3: #7E2553; /* Purple */
-  --color-4: #008751; /* Dark Green */
-  --color-5: #AB5236; /* Brown */
-  --color-6: #5F574F; /* Dark Gray */
-  --color-7: #C2C3C7; /* Light Gray */
-  --color-8: #FFF1E8; /* White */
-  --color-9: #FF004D; /* Red */
-  --color-10: #FFA300; /* Orange */
-  --color-11: #FFEC27; /* Yellow */
-  --color-12: #00E436; /* Green */
-  --color-13: #29ADFF; /* Blue */
-  --color-14: #83769C; /* Lavender */
-  --color-15: #FF77A8; /* Pink */
-  --color-16: #FFCCAA; /* Peach */
-}
 
 
 /* Simulated CRT scanlines */
@@ -82,6 +64,7 @@ html, body {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
   z-index: 2;
   overflow:hidden;
+
 }
 
 
@@ -96,18 +79,20 @@ body::-webkit-scrollbar {
 
 
 .header {
-    position: relative;
-    font-family: 'Arial';
-    color: whitesmoke;
+    position: fixed;
+    font-family: 'ms-sans-serif-1';
+    color: snow;
     background-color: #000000;
-    padding: 10px;
-    font-size:4vh;
 
-    margin-bottom: 0vh;
-    /*margin-top: -1vh; */
+    font-size:4vh;
+    padding-left: 4vh;
+    padding-right: 4vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
     text-align: center; 
     user-select: none; 
-    -webkit-user-drag: none; 
+    -webkit-user-drag: none;
+
     z-index: 99;
 }
 
@@ -118,7 +103,7 @@ body::-webkit-scrollbar {
     display:flex;
     margin-left: auto;
     margin-right: auto;
-    width: 28vh; /*28*/
+    width: 39vh; /*28*/
     min-width: 15vw; /*15*/
     z-index: 2;
     opacity: 100%; /* was 90% */
@@ -139,7 +124,7 @@ body::-webkit-scrollbar {
     margin-bottom: 1vh;
 
     min-width: 5vw; /*35*/
-    width: 55vh; /*45*/
+    width: 75vh; /*45*/
     max-width: 100%;
     margin-bottom: 2vh;
     backdrop-filter: blur(5px);
@@ -161,24 +146,24 @@ body::-webkit-scrollbar {
   color: whitesmoke; 
   background-color: #000000;
   padding: 10px;
-  font-family: Helmet-Regular; 
+  font-family: ms-sans-serif-1; 
   user-select: none; 
   -webkit-user-drag: none;
 }
 
 .intro-text {
-  font-family: Helmet-Regular; 
+  font-family: ms-sans-serif-1; 
   color: whitesmoke;
-  font-size: 2vh;
-  margin-bottom: 1vh; 
-  margin-top: -0.5vh;
+  font-size: 2.5vh;
+  margin-bottom: 3vh; 
+  margin-top: 0vh;
 }
 
 html, body {
   scrollbar-width: 1px;
 
 }
-
+/*
 .video1 {
     position: fixed;
     right: 0;
@@ -187,28 +172,55 @@ html, body {
     pointer-events: none;
     min-height: 100%;
     max-width: 120vh;
+    backdrop-filter: blur(100px);
     height: auto;
-    opacity: 35%; /*15*/
-    transform: translateY(-50) translateX(50); /*good way to center stuff*/
+    
+    opacity: 0%; 
+    transform: translateY(-50) translateX(50); 
     scroll-snap-type: y mandatory;
     z-index: -1;
 }
 
-/**/
+*/
 .videoback {
   position: fixed;
-
   
   pointer-events: none;
   width: 78vh;
   height: 63vh;
 
+  transform: translateY(-50) translateX(50);
+
+  z-index: -1;
+}
+
+.bigglass {
+  position: fixed;
+  
+  pointer-events: none;
+  width: 78vh;
+  height: 63vh;
 
   transform: translateY(-50) translateX(50);
 
   z-index: 1;
+  backdrop-filter: blur(2px);
+
 }
 
+.bigglass2 {
+  position: fixed;
+  
+  pointer-events: none;
+  width: 78vh;
+  height: 63vh;
+
+  transform: translateY(-50) translateX(50);
+
+  z-index: 0;
+  backdrop-filter: blur(15px);
+
+}
 
 
 .video2 {
@@ -216,10 +228,11 @@ html, body {
   right: 0;
   bottom: 0;
   min-width: 100%;
+  max-width: 100%;
   pointer-events: none;
   min-height: 100%;
   height: auto;
-  opacity: 8%;
+  opacity: 20%;
 
   transform: translateY(-50) translateX(50); /*good way to center stuff*/
   scroll-snap-type: y mandatory;
@@ -228,54 +241,70 @@ html, body {
 
 
 .buttonbox {
-  
+
+    position: absolute;
     opacity: 100%;
-    
     height: auto;
     width: auto;
-
-
-    margin-left: 1%;
-    margin-right: 1%;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    margin-top: 1%;
-
-    font-family: PixelOperator;
-    font-size: xx-large;
-
+    font-family: 'ms-sans-serif-1'; 
+    font-size: 3vh;
     color: whitesmoke;
-    border-color: whitesmoke;
-    background-color: #11111100;
-
-    
-    padding: 1.5vh;
+    border-color: rgba(0, 0, 0, 0.582);
+    background-color: #111111ab;
+    padding: 1vh;
     backdrop-filter: blur(5px);
     text-decoration: none;
     cursor:none;
-
-
     user-select: none;
-    transition-duration: 0.1s;
+    min-width: 30vh;
+    z-index: 99 ;
 
-    z-index: 3 ;
+    left: 25vh;
+    top: 25vh;
 
-    
 
 }
+
 
 .buttonbox:hover {
     border-color: #004990;
     color: #004990;
-    background-color: #11111185;
-
 }
-
 .buttonboxPink:hover {
   border-color: #ff0000;
   color: #ff0000;
   box-shadow: 0px 0px 15px rgb(255, 28, 225);
 }
+
+
+.button1 {
+  
+  margin-top: 10vh;
+
+
+}
+.button2 {
+
+  margin-top: 17vh;
+
+}
+.button3 {
+
+  margin-top: 24vh;
+
+}
+.button4 {
+
+  margin-top: 31vh;
+
+}
+.button5 {
+
+  margin-top: 38vh;
+
+}
+
+
 
 
 
@@ -290,7 +319,15 @@ html, body {
   src: url(other/font/Helmet-Regular.ttf);
 }
 
+@font-face {
+  font-family: "lucon";
+  src: url(other/font/lucon.ttf);
+}
 
+@font-face {
+  font-family: "ms-sans-serif-1";
+  src: url(other/font/ms-sans-serif-1.ttf);
+}
 
 *{
 
@@ -480,7 +517,7 @@ html, body {
 .rainbow {
   position: fixed;
   width: 150vh;
-  z-index: 1;
+  z-index: 0;
   opacity: 90%;
   margin-bottom: -23vh;
   user-select: none;
