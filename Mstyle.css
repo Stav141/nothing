@@ -82,11 +82,14 @@ body {
 
 .header {
     position: relative;
-    font-family: 'Arial';
+    font-family: 'ms-sans-serif-1';
     color: whitesmoke;
     background-color: #000000;
-    padding: 10px;
-    font-size:4vh;
+    padding-left: 3vh;
+    padding-right: 3vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    font-size: 4vh;
 
     margin-bottom: 0vh;
     /*margin-top: -1vh; */
