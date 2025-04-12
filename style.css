@@ -227,22 +227,22 @@ html, body {
   position: fixed;
   right: 0;
   bottom: 0;
-  min-width: 100%;
-  max-width: 100%;
-  pointer-events: none;
-  min-height: 100%;
-  height: auto;
-  opacity: 20%;
 
-  transform: translateY(-50) translateX(50); /*good way to center stuff*/
+  pointer-events: none;
+  min-width: 100%;
+  min-height: 100%;
+
+  opacity: 50%;
+
+  /* transform: translateY(-50) translateX(50); good way to center stuff*/
   scroll-snap-type: y mandatory;
   z-index: -3;
 }
 
 
 .buttonbox {
-
-    position: absolute;
+    display: block;
+    position: relative;
     opacity: 100%;
     height: auto;
     width: auto;
@@ -259,9 +259,9 @@ html, body {
     min-width: 30vh;
     z-index: 99 ;
 
-    left: 25vh;
-    top: 25vh;
-
+    
+    left: -55vh;
+    margin-top: 1vh;
 
 }
 
@@ -278,29 +278,28 @@ html, body {
 
 
 .button1 {
-  
-  margin-top: 10vh;
+
 
 
 }
 .button2 {
 
-  margin-top: 17vh;
+  
 
 }
 .button3 {
 
-  margin-top: 24vh;
+
 
 }
 .button4 {
 
-  margin-top: 31vh;
+
 
 }
 .button5 {
 
-  margin-top: 38vh;
+
 
 }
 
@@ -585,4 +584,25 @@ height: 5vh;
   margin-left: 1vh;
 
   
+}
+
+.mute {
+  position: fixed;
+
+  opacity: 100%;
+  height: auto;
+  width: auto;
+  font-family: 'ms-sans-serif-1'; 
+  font-size: 2vh;
+  color: whitesmoke;
+  border-color: rgba(0, 0, 0, 0.582);
+  background-color: #111111ab;
+  padding: 1vh;
+  backdrop-filter: blur(5px);
+  text-decoration: none;
+  cursor: url(other/cursor.ico), default;
+  user-select: none;
+  top: 1vh;
+  left: 12vh;
+  z-index: 99 ;
 }

@@ -13,7 +13,7 @@
 </head>
 
 <script>
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 1260) {
         window.location.href = "mobile";
     }
 </script>
@@ -32,6 +32,89 @@ style= "width: 100%; position: fixed;top: -3vh;z-index: -2; -webkit-mask-image: 
 <img style="position: fixed; right: 5vh; top: 5vh; width: 12vh" src="other/conansatelite.gif " alt="">
 -->
 <img src="other/gifs/english.png" style="position: fixed; z-index: 99; top: 0px; left: 0px; width: 10vh;">
+
+
+
+
+
+
+
+  <!-- Background Audio -->
+  <audio id="bg-audio" src="other/audio/background_audio.mp3" autoplay loop></audio>
+
+  <!-- Toggle Button -->
+  <button id="audio-toggle" class="mute">Mute Music</button>
+
+  <script>
+    const bgAudio = document.getElementById('bg-audio');
+    const toggleBtn = document.getElementById('audio-toggle');
+
+    // Set initial volume
+    bgAudio.volume = 0.2;
+
+    // Resume from saved time
+    const savedTime = localStorage.getItem('bg-audio-time');
+    if (savedTime) {
+      bgAudio.currentTime = parseFloat(savedTime);
+    }
+
+    // Save current time every second
+    setInterval(() => {
+      localStorage.setItem('bg-audio-time', bgAudio.currentTime);
+    }, 1000);
+
+    // Required user interaction to start audio on some browsers
+    document.addEventListener('click', () => {
+      if (bgAudio.paused) {
+        bgAudio.play().catch(() => {});
+      }
+    }, { once: true });
+
+    // Mute / Unmute Toggle
+    toggleBtn.addEventListener('click', () => {
+      bgAudio.muted = !bgAudio.muted;
+      toggleBtn.textContent = bgAudio.muted ? 'Unmute Music' : 'Mute Music';
+    });
+  </script>
+
+
+
+
+<link rel="stylesheet" href="style.css">
+<audio id="recording" src="other/audio/Recording.mp3"></audio>
+
+
+<div id="buttonbox">
+    <a href="https://github.com/Stav141" target=_blank style="text-decoration: none">
+        <button onmouseover="document.getElementById('recording').play()",  onmousedown="document.getElementById('recording').play()" class="buttonbox button2"> <p style=" float: left; display: inline;">></p>
+        github
+        </button>
+    </a>
+
+    <a href="https://llamaking.net" target=_blank style="text-decoration: none;">
+        <button onmouseover="document.getElementById('recording').play()" onmousedown="document.getElementById('recording').play()" class="buttonbox buttonboxPink button3"><p style=" float: left; display: inline;">></p>
+        visit llamaking.net
+        </button>
+    </a>
+
+    <button onclick="window.location.href='mailto:stratx280@gmail.com'" onmouseover="document.getElementById('recording').play()" onmousedown="document.getElementById('recording').play()"
+    class="buttonbox button4"><p style="float: left; display: inline;">></p>
+    email me
+    </button>
+
+    <a href="bio" style="text-decoration: none;">
+        <button onmouseover="document.getElementById('recording').play()" onmousedown="document.getElementById('recording').play()" class="buttonbox button1"><p style=" float: left; display: inline;">></p>
+        on myself
+        </button>
+    </a>
+    <a href="https://x.com/stavrrrr" target=_blank style="text-decoration: none;">
+        <button onmouseover="document.getElementById('recording').play()" onmousedown="document.getElementById('recording').play()" class="buttonbox button1"><p style=" float: left; display: inline;">></p>
+        x (twitter)
+        </button>
+    </a>
+</div>
+
+
 
 <head>
     <style>
@@ -80,8 +163,7 @@ style= "width: 100%; position: fixed;top: -3vh;z-index: -2; -webkit-mask-image: 
 <!--new down-->
 
 <div class="container">
-    <link rel="stylesheet" href="style.css">
-    <audio id="select_audio" src="other/audio/select.mp3"></audio>
+
     
 
     <p class="infobar"></p>
@@ -115,30 +197,6 @@ style= "width: 100%; position: fixed;top: -3vh;z-index: -2; -webkit-mask-image: 
 <p class="bigglass2"></p>
 <img class="rainbow" src="other/rainbow-95.gif" alt="">
 
-<img src="other/gifs/banner.gif" style="position: fixed; z-index: 9; margin-left: -55vh; margin-top: -70vh; width: 25vh; ; ;" alt=""><p style=" float: left; display: inline;">></p>
+<img src="other/gifs/banner.gif" style="position: fixed; z-index: 9; margin-top: -70vh; width: 25vh; margin-left: -55vh ;" alt=""><p style=" float: left; display: inline;">></p>
 
-<div id="buttonbox">
-    <a href="https://github.com/Stav141" target=_blank style="text-decoration: none">
-        <button onmouseover="document.getElementById('').play()",  onmousedown="document.getElementById('').play()" class="buttonbox button2"> <p style=" float: left; display: inline;">></p>
-        github
-        </button>
-    </a>
 
-    <a href="https://llamaking.net" target=_blank style="text-decoration: none;">
-        <button onmouseover="document.getElementById('').play()" onmousedown="document.getElementById('').play()" class="buttonbox buttonboxPink button3"><p style=" float: left; display: inline;">></p>
-        visit llamaking.net
-        </button>
-    </a>
-
-    <a href="mailto:stratx280@gmail.com" style="text-decoration: none;">
-        <button onmouseover="document.getElementById('').play()" onmousedown="document.getElementById('').play()" class="buttonbox button4" ><p style=" float: left; display: inline;">></p>
-        email
-        </button>
-    </a>
-
-    <a href="bio" style="text-decoration: none;">
-        <button onmouseover="document.getElementById('').play()" onmousedown="document.getElementById('').play()" class="buttonbox button1"><p style=" float: left; display: inline;">></p>
-        on mineself
-        </button>
-    </a>
-</div>

@@ -72,3 +72,14 @@ function glitchEffect() {
 }
 
 setInterval(glitchEffect, 100);
+
+// Load saved time if available
+const savedTime = localStorage.getItem('bg-audio-time');
+if (savedTime) {
+  bgAudio.currentTime = parseFloat(savedTime);
+}
+
+// Save current time periodically
+setInterval(() => {
+  localStorage.setItem('bg-audio-time', bgAudio.currentTime);
+}, 1000);
