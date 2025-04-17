@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta >
+    <link rel="icon" href="other/favicon.ico" type="image/ico" />
+    <link rel="manifest" href="/manifest.json">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" viewport-fit=cover>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <body style="background-color: #000000;"></body>
+    <body style="  user-select: none; -webkit-user-drag: none;"></body>
+    <title>◈ StNet</title>
+</head>
+
+<script>
+    if (window.innerWidth <= 1260) {
+        window.location.href = "mobile";
+    }
+</script>
+
+
+<link rel="stylesheet" href="newstyle.css">
+<link rel="stylesheet" href="java.js">
+
+
+
+<img src="other/eyered.png" class="MainImage">
+
+<img src="other/quote1_style2.png" class="quote">
+
+
+
+
+
+<!-- Background Audio -->
+<audio id="bg-audio" src="other/audio/background_audio.mp3" autoplay loop></audio>
+
+<!-- Toggle Button -->
+<button id="audio-toggle" class="mute">Mute Music</button>
+
+<script>
+const bgAudio = document.getElementById('bg-audio');
+const toggleBtn = document.getElementById('audio-toggle');
+
+// Set initial volume
+bgAudio.volume = 0.2;
+
+// Resume from saved time
+const savedTime = localStorage.getItem('bg-audio-time');
+if (savedTime) {
+    bgAudio.currentTime = parseFloat(savedTime);
+}
+
+// Save current time every second
+setInterval(() => {
+    localStorage.setItem('bg-audio-time', bgAudio.currentTime);
+}, 1000);
+
+// Required user interaction to start audio on some browsers
+document.addEventListener('click', () => {
+    if (bgAudio.paused) {
+    bgAudio.play().catch(() => {});
+    }
+}, { once: true });
+
+// Mute / Unmute Toggle
+toggleBtn.addEventListener('click', () => {
+    bgAudio.muted = !bgAudio.muted;
+    toggleBtn.textContent = bgAudio.muted ? 'Unmute Music' : 'Mute Music';
+});
+</script>
+
+
+
+
+<audio id="recording" src="other/audio/Recording.mp3"></audio>
+
+
+<div id="buttonbox">
+    <a href="https://github.com/Stav141" target=_blank style="text-decoration: none">
+        <button onmouseover="document.getElementById('recording').play()",  onmousedown="document.getElementById('recording').play()" class="buttonbox button2"> <p style=" float: left; display: inline;">></p>
+        github
+        </button>
+    </a>
+
+    <a href="https://llamaking.net" target=_blank style="text-decoration: none;">
+        <button onmouseover="document.getElementById('recording').play()" onmousedown="document.getElementById('recording').play()" class="buttonbox buttonboxPink button3"><p style=" float: left; display: inline;">></p>
+        visit llamaking.net
+        </button>
+    </a>
+
+    <button onclick="window.location.href='mailto:stratx280@gmail.com'" onmouseover="document.getElementById('recording').play()" onmousedown="document.getElementById('recording').play()"
+    class="buttonbox button4"><p style="float: left; display: inline;">></p>
+    email me
+    </button>
+
+    <a href="bio" style="text-decoration: none;">
+        <button onmouseover="document.getElementById('recording').play()" onmousedown="document.getElementById('recording').play()" class="buttonbox button1"><p style=" float: left; display: inline;">></p>
+        on myself
+        </button>
+    </a>
+
+</div>
+
+
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .screen {
+            width: 640px;
+            height: 480px;
+            background-color: white;
+            box-shadow: 0 0 10px #ffffff33; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            color: black;
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+    </style>
+</head>
+<body>
+
+
+
+
+<video oncontextmenu="return false;" autoplay muted loop id="backClip" class="video2" controls disablePictureInPicture controlsList="nodownload">
+    <source src="other/iceberg.webm" type="video/webm">
+</video>
+
+<h1 class="header" style="text-align: center; margin-top: -75vh;">s t a v 2</h1>
+<h2 style="color: rgba(255, 255, 255, 0.164); font-family: ms-sans-serif-1; position: fixed; z-index: 9; margin-top: 70vh; font-size: 3vh;"> 
+    <marquee width="680vh" behavior="alternate" direction="right" >sun - earth - moon</marquee></h2>
+
+
+
+
+
+<!-- don't touch <img src="other/gifs/banner.gif" style="position: fixed; z-index: 9; margin-top: -70vh; width: 25vh; margin-left: -55vh ;" alt=""><p style=" float: left; display: inline;">></p>-->
+
+
+
+<img class="rainbow" src="other/rainbow-95.gif" alt="">
+
+

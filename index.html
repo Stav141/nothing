@@ -19,68 +19,60 @@
 </script>
 
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="newstyle.css">
 <link rel="stylesheet" href="java.js">
 
-<!--
-<img src="other/sky.png" 
 
-style= "width: 100%; position: fixed;top: -3vh;z-index: -2; -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, 
-    from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));   user-select: none;
-    -webkit-user-drag: none;" alt="">
 
-<img style="position: fixed; right: 5vh; top: 5vh; width: 12vh" src="other/conansatelite.gif " alt="">
--->
-<img src="other/gifs/english.png" style="position: fixed; z-index: 99; top: 0px; left: 0px; width: 10vh;">
+<img src="other/eyered.png" class="MainImage">
+
+<img src="other/quote1_style2.png" class="quote">
 
 
 
 
 
+<!-- Background Audio -->
+<audio id="bg-audio" src="other/audio/background_audio.mp3" autoplay loop></audio>
 
+<!-- Toggle Button -->
+<button id="audio-toggle" class="mute">Mute Music</button>
 
-  <!-- Background Audio -->
-  <audio id="bg-audio" src="other/audio/background_audio.mp3" autoplay loop></audio>
+<script>
+const bgAudio = document.getElementById('bg-audio');
+const toggleBtn = document.getElementById('audio-toggle');
 
-  <!-- Toggle Button -->
-  <button id="audio-toggle" class="mute">Mute Music</button>
+// Set initial volume
+bgAudio.volume = 0.2;
 
-  <script>
-    const bgAudio = document.getElementById('bg-audio');
-    const toggleBtn = document.getElementById('audio-toggle');
+// Resume from saved time
+const savedTime = localStorage.getItem('bg-audio-time');
+if (savedTime) {
+    bgAudio.currentTime = parseFloat(savedTime);
+}
 
-    // Set initial volume
-    bgAudio.volume = 0.2;
+// Save current time every second
+setInterval(() => {
+    localStorage.setItem('bg-audio-time', bgAudio.currentTime);
+}, 1000);
 
-    // Resume from saved time
-    const savedTime = localStorage.getItem('bg-audio-time');
-    if (savedTime) {
-      bgAudio.currentTime = parseFloat(savedTime);
+// Required user interaction to start audio on some browsers
+document.addEventListener('click', () => {
+    if (bgAudio.paused) {
+    bgAudio.play().catch(() => {});
     }
+}, { once: true });
 
-    // Save current time every second
-    setInterval(() => {
-      localStorage.setItem('bg-audio-time', bgAudio.currentTime);
-    }, 1000);
-
-    // Required user interaction to start audio on some browsers
-    document.addEventListener('click', () => {
-      if (bgAudio.paused) {
-        bgAudio.play().catch(() => {});
-      }
-    }, { once: true });
-
-    // Mute / Unmute Toggle
-    toggleBtn.addEventListener('click', () => {
-      bgAudio.muted = !bgAudio.muted;
-      toggleBtn.textContent = bgAudio.muted ? 'Unmute Music' : 'Mute Music';
-    });
-  </script>
+// Mute / Unmute Toggle
+toggleBtn.addEventListener('click', () => {
+    bgAudio.muted = !bgAudio.muted;
+    toggleBtn.textContent = bgAudio.muted ? 'Unmute Music' : 'Mute Music';
+});
+</script>
 
 
 
 
-<link rel="stylesheet" href="style.css">
 <audio id="recording" src="other/audio/Recording.mp3"></audio>
 
 
@@ -155,44 +147,16 @@ style= "width: 100%; position: fixed;top: -3vh;z-index: -2; -webkit-mask-image: 
 
 <h1 class="header" style="text-align: center; margin-top: -75vh;">s t a v 2</h1>
 <h2 style="color: rgba(255, 255, 255, 0.164); font-family: ms-sans-serif-1; position: fixed; z-index: 9; margin-top: 70vh; font-size: 3vh;"> 
-    <marquee width="680vh" behavior="alternate" direction="right" >640 x 480</marquee></h2>
-<!--new down-->
-
-<div class="container">
-
-    
-
-    <p class="infobar"></p>
+    <marquee width="680vh" behavior="alternate" direction="right" >sun - earth - moon</marquee></h2>
 
 
 
 
-    <!--<h1 class="header">s t a v 2</h1>
-    <p class="introduction" style="margin-top: -3vh; z-index: 15; opacity: 50%;">________</p>
 
-    <p class="intro-text">
-        This website is not a good stalking piece.<br/>
-    </p>
--->
-    <img src="other/eyered.png" class="MainImage">
-    <img src="other/quote1_style2.png" class="SecondImage">
+<!-- don't touch <img src="other/gifs/banner.gif" style="position: fixed; z-index: 9; margin-top: -70vh; width: 25vh; margin-left: -55vh ;" alt=""><p style=" float: left; display: inline;">></p>-->
 
 
-    
-</div>
-<!--new up-->
 
-<!-- don't touch -->
-</div>
-</body>
-</html>
-<!-- don't touch -->
-
-
-<p class="bigglass"></p>
-<p class="bigglass2"></p>
 <img class="rainbow" src="other/rainbow-95.gif" alt="">
-
-<img src="other/gifs/banner.gif" style="position: fixed; z-index: 9; margin-top: -70vh; width: 25vh; margin-left: -55vh ;" alt=""><p style=" float: left; display: inline;">></p>
 
 
