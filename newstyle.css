@@ -8,6 +8,9 @@ filter: grayscale(100%) contrast(100%);
 }
 */
 
+html, body {
+    cursor: url(other/cursorDot.ico);
+}
 
 @font-face {
     font-family: 'PixelOperator' ;
@@ -90,9 +93,9 @@ html, body {
     user-select: none; 
     -webkit-user-drag: none;
     position: fixed;
-    top: 20vh;
-    width: 49vh; /*28*/
-    min-width: 25vw; /*15*/
+    top: 13vh;
+    width: 45vh; /*28*/
+
     z-index: 2;
     opacity: 100%; /* was 90% */
     backdrop-filter: blur(5px);
@@ -118,7 +121,7 @@ html, body {
 
     color: #c2c2c2;
     z-index: 0;
-
+    cursor: url(other/CursorDot.ico), default ;
     left: -2vw;
     height: 100vh ;
     width: 100vh;
@@ -133,15 +136,20 @@ html, body {
     size: 50vw;
     font-size: 1.5vh;
     cursor: url(other/CursorDot.ico), default ;
-    
 }
+.links :hover {
+    text-decoration:line-through ;
+
+}
+
+
 .link1 {
     top: 13.5vh;
     color: rgb(0, 13, 255);
 }
 .link2 {
     top: 27vh;
-    color: rgb(255, 255, 255);
+    color: #d5edd0;
 }
 .link3 {
     top: 38.5vh;
