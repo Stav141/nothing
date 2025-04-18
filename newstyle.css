@@ -67,17 +67,17 @@ opacity: 50%;
 
 /* i forgot what this is but it holds the website together */
 html, body {
-cursor: url(other/CursorDot.ico), default ;
-background-color: black;
-margin: 0;
-padding: 0;
-width: 100vw;
-height: 100vh;
-display: flex;
-justify-content: center;
-align-items: center;
-overflow: hidden;
-z-index: -20;
+    cursor: url(other/CursorDot.ico), default ;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: -20;
 }
 /* i forgot what this is but it holds the website together */
 
@@ -129,7 +129,7 @@ z-index: -20;
     left: 4vh;
     size: 50vw;
     font-size: 1.5vh;
-    
+    cursor: url(other/CursorDot.ico), default ;
     
 }
 .link1 {
