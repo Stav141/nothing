@@ -16,18 +16,18 @@ filter: grayscale(100%) contrast(100%);
 }
 
 @font-face {
-font-family: "Helmet-Regular";
-src: url(other/font/Helmet-Regular.ttf);
+    font-family: "Helmet-Regular";
+    src: url(other/font/Helmet-Regular.ttf);
 }
 
 @font-face {
-font-family: "lucon";
-src: url(other/font/lucon.ttf);
+    font-family: "lucon";
+    src: url(other/font/lucon.ttf);
 }
 
 @font-face {
-font-family: "ms-sans-serif-1";
-src: url(other/font/ms-sans-serif-1.ttf);
+    font-family: "ms-sans-serif-1";
+    src: url(other/font/ms-sans-serif-1.ttf);
 }
 
 @font-face {
@@ -43,25 +43,28 @@ html, body {
     scrollbar-width: 1px;
     
 }
-
+html, body {
+    cursor: url(other/cursorDot.ico), default;
+    /* just change the cursor.ico path to your location */
+}
 /* Simulated CRT scanlines */
 body::before {
-content: "";
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background: repeating-linear-gradient(
-    rgba(0, 0, 0, 0.3) 0px,
-    rgba(0, 0, 0, 0.1) 1px,
-    transparent 2px,
-    transparent 4px
-);
-pointer-events: none;
-animation: scanlines 0.1s infinite linear;
-z-index: 9999;
-opacity: 50%;
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        rgba(0, 0, 0, 0.3) 0px,
+        rgba(0, 0, 0, 0.1) 1px,
+        transparent 2px,
+        transparent 4px
+    );
+    pointer-events: none;
+    animation: scanlines 0.1s infinite linear;
+    z-index: 9999;
+    opacity: 50%;
 }
 /* Simulated CRT scanlines */
 
