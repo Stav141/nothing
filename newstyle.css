@@ -93,12 +93,14 @@ html, body {
     user-select: none; 
     -webkit-user-drag: none;
     position: fixed;
-    top: 13vh;
-    width: 45vh; /*28*/
-
+    top: 12vh;
+    width: 40vw; 
+    right: 50vh;
     z-index: 2;
-    opacity: 100%; /* was 90% */
+    opacity: 100%; 
     backdrop-filter: blur(5px);
+
+    max-width: 20%;
 }
 
 .quote {
@@ -106,20 +108,24 @@ html, body {
     -webkit-user-drag: none;
     position: fixed;
 
-    margin-top: 20vh; 
-    margin-bottom: 1vh;
+    margin-top: 5vw; 
     z-index: 2;
-    min-width: 5vw; /*35*/
-    width: 75vh; /*45*/
+    min-width: 5vw; 
+    width: 75vh;
+    
+    max-width: 40%;
 
+
+    right: 32vh;
     margin-bottom: 2vh;
     /*backdrop-filter: blur(5px);*/
+
 }
 
 .background {
     position: absolute;
 
-    color: #c2c2c2;
+    color: #d6d6d6;
     z-index: 0;
     cursor: url(other/CursorDot.ico), default ;
     left: -2vw;
@@ -149,9 +155,16 @@ html, body {
 }
 .link2 {
     top: 27vh;
-    color: #d5edd0;
+    color: #ffffff;
 }
 .link3 {
     top: 38.5vh;
     color: rgb(255, 0, 0);
+}
+
+.bggif {
+    opacity: 10%;
+    z-index: -1;
+    min-width: 100%;
+    min-height: 100%;
 }
