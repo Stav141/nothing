@@ -95,7 +95,7 @@ html, body {
     position: fixed;
     top: 12vh;
     width: 40vw; 
-    right: 50vh;
+    left: 95vh;
     z-index: 2;
     opacity: 100%; 
     backdrop-filter: blur(5px);
@@ -116,7 +116,7 @@ html, body {
     max-width: 40%;
 
 
-    right: 32vh;
+    left: 77vh;
     margin-bottom: 2vh;
     /*backdrop-filter: blur(5px);*/
 
