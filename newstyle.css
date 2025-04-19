@@ -94,13 +94,13 @@ html, body {
     -webkit-user-drag: none;
     position: fixed;
     top: 12vh;
-    width: 40vw; 
+    width: 40vh; 
     left: 95vh;
     z-index: 2;
     opacity: 100%; 
     backdrop-filter: blur(5px);
 
-    max-width: 20%;
+
 }
 
 .quote {
@@ -108,14 +108,11 @@ html, body {
     -webkit-user-drag: none;
     position: fixed;
 
-    margin-top: 5vw; 
+    margin-top: 8vh; 
     z-index: 2;
-    min-width: 5vw; 
+
     width: 75vh;
     
-    max-width: 40%;
-
-
     left: 77vh;
     margin-bottom: 2vh;
     /*backdrop-filter: blur(5px);*/
@@ -128,7 +125,7 @@ html, body {
     color: #d6d6d6;
     z-index: 0;
     cursor: url(other/CursorDot.ico), default ;
-    left: -2vw;
+    left: -2vh;
     height: 100vh ;
     width: 100vh;
     font-size: 1.5vh;
@@ -167,4 +164,8 @@ html, body {
     z-index: -1;
     min-width: 100%;
     min-height: 100%;
+}
+
+body {
+    overflow-y: hidden ;
 }
