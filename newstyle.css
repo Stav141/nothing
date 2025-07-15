@@ -160,7 +160,7 @@ html, body {
 }
 
 .bggif {
-    opacity: 10%;
+    opacity: 0%;
     z-index: -1;
     min-width: 100%;
     min-height: 100%;
@@ -168,4 +168,18 @@ html, body {
 
 body {
     overflow-y: hidden ;
+}
+
+.test_box {
+    background-color: #76C9F3 ;
+    position: absolute;
+    align-items: center;
+    bottom: 0px;
+    z-index: 9;
+    padding: 10vh;
+    border-radius: 45px;
+    border-style:solid ;
+    border-width: 10px;
+    border-color: rgb(255, 255, 255);
+    width: 50vh;
 }
