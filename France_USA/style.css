@@ -1,0 +1,87 @@
+
+
+.stateSelect {
+    position: absolute;
+
+    font-family: constantia;
+    font-style: italic;
+    background-color: rgba(255, 255, 255, 0);
+    border-color: transparent;
+    text-size-adjust: 50vh;
+    min-width: auto;
+    scrollbar-color: transparent;
+    z-index: 1;
+    font-size: x-large ;
+    text-align: right;
+
+}
+
+
+.styled-scrollbars {
+    scrollbar-color: transparent transparent;
+    scrollbar-width: thin;
+    --scrollbar-background: var(--styled-scrollbar-background, var(--shreddit-content-background));
+}
+
+.choice1 {
+    right: 50vw;
+    top: 25vw;
+}
+
+.choice2 {
+    right: 46vw;
+    top: 31vw;
+}
+
+.choice3 {
+    right: 37vw;
+    top: 31vw;
+}
+.choice4 {
+    right: 45vw;
+    top: 13vw;
+}
+.choice5 {
+    right: 35vw;
+    top: 13vw;
+}
+.choice6 {
+    right: 38vw;
+    top: 24vw;
+    z-index: 9;
+}
+.choice7 {
+    right: 52vw;
+    top: 12vw;
+    z-index: 9;
+}
+.choice8 {
+    right: 33vw;
+    top: 35vw;
+    z-index: 9;
+}
+.choice9 {
+    right: 45vw;
+    top: 8vw;
+    z-index: 9;
+}
+.choice10 {
+    right: 47vw;
+    top: 17vw;
+    z-index: 9;
+}
+.choice11 {
+    right: 58vw;
+    top: 15vw;
+    z-index: 9;
+}
+.choice12 {
+    right: 57vw;
+    top: 19vw;
+    z-index: 9;
+}
+.choice13 {
+    right: 39vw;
+    top: 19vw;
+    z-index: 9;
+}
